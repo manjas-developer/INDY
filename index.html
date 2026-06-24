@@ -3,173 +3,201 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INDY CREATE - Ultimate OS Workspace</title>
+  <title>INDY CREATE | Professional Architecture Suite</title>
+  <!-- Tailwind CSS Play CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Premium Global Font & Selection Styles */
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap');
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 6px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-track {
-      background: #0b0f19;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: #1f2937;
-      border-radius: 10px;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #030712; }
+    .code-font { font-family: 'JetBrains Mono', monospace; }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #0b1329; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #374151; border-radius: 10px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+    .glass-panel { background: rgba(17, 24, 39, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.06); }
   </style>
 </head>
-<body class="min-h-screen w-screen bg-[#05070f] text-gray-100 overflow-x-hidden antialiased selection:bg-indigo-500 selection:text-white custom-scrollbar">
+<body class="min-h-screen w-screen text-gray-100 overflow-x-hidden antialiased selection:bg-indigo-600 selection:text-white custom-scrollbar">
 
-  <div id="indy-create-app-root">
+  <div id="indy-suite-root">
     
-    <div id="screen-login" class="min-h-screen w-screen flex items-center justify-center px-4 relative">
-      <div class="absolute w-[600px] h-[600px] bg-indigo-500/5 blur-[150px] rounded-full top-0 left-0 animate-pulse"></div>
-      <div class="w-full max-w-md bg-[#0b0f19]/90 border border-gray-800/80 p-10 rounded-3xl shadow-2xl backdrop-blur-2xl z-10 space-y-8">
+    <!-- 🔐 SCREEN 1: ULTRA PREMIUM GATEWAY AUTH -->
+    <div id="screen-login" class="min-h-screen w-screen flex items-center justify-center px-4 relative bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-950/40 via-gray-950 to-black">
+      <div class="absolute w-[500px] h-[500px] bg-purple-600/10 blur-[120px] rounded-full -top-10 -left-10 animate-pulse"></div>
+      <div class="absolute w-[500px] h-[500px] bg-indigo-600/10 blur-[120px] rounded-full -bottom-10 -right-10 animate-pulse"></div>
+      
+      <div class="w-full max-w-md glass-panel p-10 rounded-3xl shadow-2xl z-10 space-y-8 transition-transform transform duration-500 hover:scale-[1.01]">
         <div class="flex flex-col items-center text-center">
-          <div class="bg-gradient-to-tr from-indigo-600 to-purple-600 p-3.5 rounded-2xl text-white font-black text-3xl shadow-xl shadow-indigo-600/20">⚡</div>
-          <h1 class="text-3xl font-black tracking-tighter text-white mt-4">INDY CREATE OS</h1>
-          <p class="text-gray-400 text-xs mt-1 font-medium">Enterprise Scaled Open Source Full Stack Engine</p>
+          <div class="bg-gradient-to-tr from-indigo-500 to-purple-600 p-4 rounded-2xl text-white font-extrabold text-3xl shadow-xl shadow-indigo-500/20 tracking-tighter">IC</div>
+          <h1 class="text-3xl font-extrabold tracking-tight text-white mt-5">INDY CREATE</h1>
+          <p class="text-gray-400 text-xs mt-1 font-medium tracking-wide uppercase">Workspace Deployment Operating System</p>
         </div>
         <form id="login-form" class="space-y-4 pt-2">
-          <input type="email" id="login-email" required placeholder="Security Node Email..." class="w-full bg-[#111827] border border-gray-700/80 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors placeholder:text-gray-600" />
-          <input type="password" id="login-password" required placeholder="System Security Key..." class="w-full bg-[#111827] border border-gray-700/80 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors placeholder:text-gray-600" />
-          <button type="submit" class="w-full py-4 bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 text-white text-sm font-bold rounded-xl shadow-xl hover:opacity-95 transition-all">
-            Boot Up Production Workspace Console 🚀
+          <div class="space-y-1">
+            <label class="text-[10px] uppercase font-bold tracking-wider text-gray-400">Security Access Node</label>
+            <input type="email" id="login-email" required value="manjas@indycreate.com" class="w-full bg-gray-950/80 border border-gray-800 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors placeholder:text-gray-600" />
+          </div>
+          <div class="space-y-1">
+            <label class="text-[10px] uppercase font-bold tracking-wider text-gray-400">Authorization Token Matrix</label>
+            <input type="password" id="login-password" required value="••••••••" class="w-full bg-gray-950/80 border border-gray-800 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors placeholder:text-gray-600" />
+          </div>
+          <button type="submit" class="w-full py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white text-sm font-bold rounded-xl shadow-xl shadow-indigo-600/20 transition-all transform hover:-translate-y-0.5">
+            Initialize Production Workspace Core 🚀
           </button>
         </form>
       </div>
     </div>
 
-    <div id="screen-dashboard" class="min-h-screen flex flex-col hidden">
-      <header class="h-20 border-b border-gray-800/60 bg-[#0b0f19]/80 backdrop-blur-md flex items-center justify-between px-8 lg:px-16 sticky top-0 z-50">
+    <!-- 📊 SCREEN 2: METRICS TERMINAL CENTRAL COMMAND -->
+    <div id="screen-dashboard" class="min-h-screen flex flex-col bg-[#02050e] hidden">
+      <header class="h-20 border-b border-gray-800/80 bg-gray-950/60 backdrop-blur-md flex items-center justify-between px-8 lg:px-16 sticky top-0 z-50">
         <div class="flex items-center gap-3">
-          <div class="bg-indigo-600 p-2.5 rounded-xl text-white font-black text-xl shadow-md">⚡</div>
-          <span class="text-xs font-black uppercase tracking-widest text-white font-mono bg-gray-800 px-3 py-1.5 rounded-lg border border-gray-700">INDY CREATE CENTRAL CLUSTER</span>
+          <div class="bg-gradient-to-r from-indigo-600 to-purple-600 p-2.5 rounded-xl text-white font-black text-sm">IC</div>
+          <span class="text-xs font-bold uppercase tracking-widest text-gray-300 font-mono bg-gray-900 px-3 py-1.5 rounded-lg border border-gray-800">INDY CORE CONTROL NETWORK</span>
         </div>
-        <button id="logout-btn" class="px-4 py-2 border border-gray-700 hover:border-red-500/40 hover:text-red-400 text-xs font-bold rounded-xl bg-gray-800/50 transition-all">Disconnect Session 🚪</button>
+        <div class="flex items-center gap-4">
+          <span class="text-xs font-mono text-indigo-400 bg-indigo-950/40 border border-indigo-900/50 px-3 py-1.5 rounded-lg">Status: Operational (Local Cache)</span>
+          <button id="logout-btn" class="px-4 py-2 border border-gray-800 hover:border-red-500/30 hover:text-red-400 text-xs font-bold rounded-xl bg-gray-900/50 transition-all">Disconnect Node 🚪</button>
+        </div>
       </header>
 
       <main class="max-w-7xl mx-auto w-full px-6 py-12 flex-1 space-y-12">
         
-        <section class="bg-[#0b0f19] border border-gray-800/80 p-8 rounded-3xl shadow-xl space-y-6">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <!-- INTEGRATED NO-CODE CMS DATA MATRIX -->
+        <section class="glass-panel p-8 rounded-3xl shadow-xl space-y-6">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
-              <h3 class="text-xl font-black text-white">📦 Integrated No-Code CMS Data Hub</h3>
-              <p class="text-xs text-gray-400 mt-0.5">Define database records to map dynamic articles or listings on canvas modules.</p>
+              <h3 class="text-xl font-bold text-white flex items-center gap-2">📦 Integrated Cloud-CMS Datastore</h3>
+              <p class="text-xs text-gray-400 mt-0.5">Map structured rows natively into variables inside any dynamic layout grid block.</p>
             </div>
-            <div class="flex gap-2">
-              <input type="text" id="cms-title" placeholder="Entry Title..." class="bg-[#111827] border border-gray-700 text-xs px-3 py-2 rounded-lg text-white" />
-              <input type="text" id="cms-author" placeholder="Author Meta..." class="bg-[#111827] border border-gray-700 text-xs px-3 py-2 rounded-lg text-white" />
-              <button id="cms-insert-btn" class="bg-indigo-600 hover:bg-indigo-500 text-xs font-bold px-4 py-2 rounded-lg transition-colors">Insert Record</button>
+            <div class="flex flex-wrap gap-2">
+              <input type="text" id="cms-title" placeholder="Context Key/Title..." class="bg-gray-950 border border-gray-800 text-xs px-3 py-2.5 rounded-xl text-white focus:outline-none focus:border-indigo-500" />
+              <input type="text" id="cms-author" placeholder="Author/Meta Info..." class="bg-gray-950 border border-gray-800 text-xs px-3 py-2.5 rounded-xl text-white focus:outline-none focus:border-indigo-500" />
+              <button id="cms-insert-btn" class="bg-indigo-600 hover:bg-indigo-500 text-xs font-bold px-4 py-2.5 rounded-xl transition-colors shadow-lg shadow-indigo-600/10">Add Record</button>
             </div>
           </div>
-          <div class="border border-gray-800 rounded-xl overflow-hidden text-xs bg-[#111827]/40">
-            <div class="grid grid-cols-3 bg-[#111827] p-3 font-bold text-gray-400 border-b border-gray-800">
-              <span>Dynamic Context Key</span><span>Author Attribution</span><span>Analytics Traffic Node</span>
+          <div class="border border-gray-800/80 rounded-xl overflow-hidden text-xs bg-gray-950/40">
+            <div class="grid grid-cols-3 bg-gray-900/80 p-3 font-bold text-gray-400 border-b border-gray-800/80 uppercase tracking-wider text-[10px]">
+              <span>Dynamic Context Object</span><span>Author Metric</span><span>Deployment Node Views</span>
             </div>
-            <div id="cms-table-body">
-              </div>
+            <div id="cms-table-body" class="max-h-48 overflow-y-auto custom-scrollbar">
+              <!-- Dynamically Embedded Rows -->
+            </div>
           </div>
         </section>
 
+        <!-- REPOSITORY PROJECT MASTER CONTROL CONTAINER -->
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div>
-            <h2 class="text-3xl font-black text-white">Active Core Platforms Architecture</h2>
-            <p class="text-xs text-gray-400 mt-1">Select code clusters or initiate absolute deployment frameworks seamlessly.</p>
+            <h2 class="text-2xl font-extrabold text-white tracking-tight">Active Repositories & Software Clusters</h2>
+            <p class="text-xs text-gray-400 mt-1">Boot up the visual designer workbench engine across distinct localized nodes.</p>
           </div>
           <form id="project-form" class="flex gap-2">
-            <input type="text" id="project-title-input" required placeholder="Platform Framework Label..." class="bg-[#0b0f19] border border-gray-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 w-72" />
-            <button type="submit" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 font-bold text-sm rounded-xl transition-all shadow-lg shadow-indigo-600/20 whitespace-nowrap">+ Initiate Repository</button>
+            <input type="text" id="project-title-input" required placeholder="Project Suite Name..." class="bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 w-64 md:w-80" />
+            <button type="submit" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm rounded-xl transition-all shadow-lg shadow-indigo-600/20 whitespace-nowrap">+ New Repository</button>
           </form>
         </div>
 
+        <!-- ACTIVE PROJECTS LIVE INTERACTIVE GRID -->
         <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          </div>
+          <!-- Dynamically Loaded Sandboxes Mapped Here -->
+        </div>
       </main>
     </div>
 
-    <div id="screen-builder" class="hidden flex h-screen w-screen bg-[#05070f] overflow-hidden">
+    <!-- ⚡ SCREEN 3: PROFESSIONAL FULL-WORKSPACE LIVE VISUAL BUILDER -->
+    <div id="screen-builder" class="hidden flex h-screen w-screen bg-[#030611] overflow-hidden">
       
-      <aside class="w-80 bg-[#0b0f19] border-r border-gray-800/80 flex flex-col justify-between h-full p-6 z-20 overflow-y-auto custom-scrollbar space-y-6">
+      <!-- Side Controller Workspace Sidebar Config Interface -->
+      <aside class="w-80 bg-gray-950 border-r border-gray-800/80 flex flex-col justify-between h-full p-5 z-20 overflow-y-auto custom-scrollbar space-y-5">
         <div>
-          <div class="flex items-center justify-between mb-6">
-            <h3 class="text-lg font-black bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">INDY CREATE</h3>
-            <button id="back-to-dash-btn" class="text-xs text-gray-400 bg-gray-800 px-3 py-1.5 rounded-lg border border-gray-700 hover:text-white transition-colors">← Dashboard</button>
+          <div class="flex items-center justify-between mb-5">
+            <div class="flex items-center gap-2">
+              <span class="text-xs bg-indigo-600 text-white font-black px-2 py-1 rounded">INDY</span>
+              <h3 class="text-sm font-bold uppercase tracking-wider text-gray-300">Workspace</h3>
+            </div>
+            <button id="back-to-dash-btn" class="text-xs text-gray-400 bg-gray-900 hover:bg-gray-800 px-3 py-1.5 rounded-lg border border-gray-800 hover:text-white transition-all">← Exit Suite</button>
           </div>
           
-          <div class="space-y-3 mb-6">
-            <label class="text-[11px] font-bold text-gray-400 uppercase tracking-widest block">App Active Routing Matrix</label>
-            <div id="pages-select-container" class="space-y-1.5">
-              </div>
+          <!-- MULTI PAGE NODE MATRIX MANAGER -->
+          <div class="space-y-2 mb-5">
+            <label class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">App Active Routing Index</label>
+            <div id="pages-select-container" class="space-y-1">
+              <!-- Active Slugs Generated Natively -->
+            </div>
             
-            <form id="add-page-form" class="pt-2 border-t border-gray-800/60 space-y-2">
-              <input type="text" id="new-page-name" required placeholder="New Page Name..." class="w-full bg-[#111827] border border-gray-700 rounded-lg p-2 text-xs text-white placeholder:text-gray-600 focus:outline-none focus:border-indigo-500" />
-              <input type="text" id="new-page-slug" required placeholder="slug-name" class="w-full bg-[#111827] border border-gray-700 rounded-lg p-2 text-xs text-white font-mono placeholder:text-gray-600 focus:outline-none focus:border-indigo-500" />
-              <button type="submit" class="w-full py-2 bg-indigo-600/10 text-indigo-400 hover:bg-indigo-600 hover:text-white text-xs font-bold rounded-lg transition-all border border-indigo-500/20">+ Append New Routing Node</button>
+            <form id="add-page-form" class="pt-2 border-t border-gray-900 space-y-2">
+              <input type="text" id="new-page-name" required placeholder="Page Label (e.g. Contact)" class="w-full bg-gray-900 border border-gray-800 rounded-lg p-2 text-xs text-white placeholder:text-gray-600 focus:outline-none focus:border-indigo-500" />
+              <input type="text" id="new-page-slug" required placeholder="slug (e.g. contact)" class="w-full bg-gray-900 border border-gray-800 rounded-lg p-2 text-xs text-white code-font placeholder:text-gray-600 focus:outline-none focus:border-indigo-500" />
+              <button type="submit" class="w-full py-2 bg-indigo-600/10 text-indigo-400 hover:bg-indigo-600 hover:text-white text-xs font-bold rounded-lg transition-all border border-indigo-500/20">+ Append Node Route</button>
             </form>
           </div>
 
-          <div class="space-y-3 pt-4 border-t border-gray-800/60">
-            <label class="text-[11px] font-bold text-gray-400 uppercase tracking-widest block">Enterprise Block Modules</label>
-            <div id="library-blocks-list" class="space-y-2">
-              </div>
+          <!-- PRODUCTION READY ENTERPRISE COMPONENT LIBRARY -->
+          <div class="space-y-2 pt-3 border-t border-gray-900">
+            <label class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">Enterprise Block Canvas Palettes</label>
+            <div id="library-blocks-list" class="space-y-1.5 max-h-48 overflow-y-auto custom-scrollbar pr-1">
+              <!-- Components Loaded Here -->
+            </div>
           </div>
           
-          <div class="space-y-3 pt-6 mt-4 border-t border-gray-800/60">
-            <label class="text-[11px] font-bold text-indigo-400 uppercase tracking-widest block">✨ GenAI Objects Compiler</label>
+          <!-- AI ENGINE SYNTHESIS MATRIX CONTAINER -->
+          <div class="space-y-2 pt-4 border-t border-gray-900">
+            <label class="text-[10px] font-bold text-indigo-400 uppercase tracking-widest block">✨ Neural Layout Architect (AI Sim)</label>
             <form id="ai-generation-form" class="space-y-2">
-              <textarea id="ai-prompt-input" rows="3" required placeholder="Synthesize specialized design component parameters..." class="w-full bg-[#111827] border border-indigo-900/40 rounded-lg p-2.5 text-xs text-white placeholder:text-gray-600 focus:border-indigo-500 focus:outline-none custom-scrollbar"></textarea>
-              <button type="submit" id="ai-compile-btn" class="w-full py-2.5 bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 hover:opacity-95 text-xs font-bold rounded-lg text-white shadow-xl shadow-indigo-600/10 transition-all">
-                Execute AI Object Synthesis
+              <textarea id="ai-prompt-input" rows="2" required placeholder="Generate modular hero layouts with glass textures..." class="w-full bg-gray-900 border border-indigo-950/40 rounded-lg p-2 text-xs text-white placeholder:text-gray-600 focus:border-indigo-500 focus:outline-none custom-scrollbar"></textarea>
+              <button type="submit" id="ai-compile-btn" class="w-full py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-95 text-xs font-bold rounded-lg text-white transition-all">
+                Execute AI Node Synthesis
               </button>
             </form>
           </div>
         </div>
 
-        <div class="pt-4 border-t border-gray-800/60 space-y-3">
-          <label class="text-[11px] font-bold text-emerald-400 uppercase tracking-widest block">Vercel Deployment Gateway</label>
-          <form id="vercel-deployment-form" class="space-y-2">
-            <input type="password" id="vercel-token-input" required placeholder="Vercel Access Authorization Token..." class="w-full bg-[#111827] border border-emerald-900/40 rounded-lg p-2 text-xs text-white focus:border-emerald-500 focus:outline-none placeholder:text-gray-600" />
-            
-            <div class="grid grid-cols-2 gap-2 text-[10px] text-gray-400 mb-2">
-              <div>
-                <label class="block mb-1">Canvas Padding (px)</label>
-                <input type="number" id="canvas-padding-input" value="24" class="w-full bg-[#111827] border border-gray-700 rounded p-1 text-white text-center focus:outline-none focus:border-indigo-500" />
-              </div>
-              <div>
-                <label class="block mb-1">Canvas Radius (px)</label>
-                <input type="number" id="canvas-radius-input" value="16" class="w-full bg-[#111827] border border-gray-700 rounded p-1 text-white text-center focus:outline-none focus:border-indigo-500" />
-              </div>
+        <!-- EXPORT ENGINE SYSTEM TERMINAL INTERFACE -->
+        <div class="pt-3 border-t border-gray-900 space-y-2">
+          <label class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest block">Export Suite Gateway (Free & Open Source)</label>
+          
+          <div class="grid grid-cols-2 gap-1.5 text-[9px] text-gray-400 mb-2">
+            <div>
+              <label class="block mb-0.5">Canvas Padding (px)</label>
+              <input type="number" id="canvas-padding-input" value="32" class="w-full bg-gray-900 border border-gray-800 rounded p-1 text-white text-center focus:outline-none focus:border-indigo-500" />
             </div>
+            <div>
+              <label class="block mb-0.5">Border Radius (px)</label>
+              <input type="number" id="canvas-radius-input" value="24" class="w-full bg-gray-900 border border-gray-800 rounded p-1 text-white text-center focus:outline-none focus:border-indigo-500" />
+            </div>
+          </div>
 
-            <button type="submit" id="cloud-deploy-btn" class="w-full py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-xs font-bold text-white rounded-lg transition-all shadow-md shadow-emerald-600/10 uppercase tracking-wider hover:opacity-95">
-              Dispatch Global Live Cloud 🚀
+          <div class="space-y-1.5">
+            <button id="btn-export-code" class="w-full py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:opacity-95 text-xs font-bold text-white rounded-lg transition-all tracking-wider uppercase text-[10px]">
+              📥 Free Production Download (ZIP / HTML)
             </button>
-          </form>
-          <div id="deployment-log-terminal" class="bg-black/40 text-[10px] font-mono p-2 border border-gray-800 rounded-lg text-gray-400 max-h-24 overflow-y-auto hidden custom-scrollbar"></div>
+            <button id="btn-copy-raw" class="w-full py-2 bg-gray-900 hover:bg-gray-800 border border-gray-800 text-gray-300 text-xs font-bold rounded-lg transition-all text-[10px]">
+              📋 Copy Raw Active Page String
+            </button>
+          </div>
+          <div id="deployment-log-terminal" class="bg-black/60 text-[9px] font-mono p-2 border border-gray-800 rounded-md text-gray-400 max-h-20 overflow-y-auto hidden custom-scrollbar"></div>
         </div>
       </aside>
 
-      <main class="flex-1 flex flex-col bg-[#070a13] h-full relative">
-        <header class="h-16 border-b border-gray-800/60 bg-[#0b0f19]/60 px-8 flex items-center justify-between">
+      <!-- Central Canvas Screen Area Monitor Layout Node -->
+      <main class="flex-1 flex flex-col bg-[#050814] h-full relative">
+        <header class="h-14 border-b border-gray-800/80 bg-gray-950/60 px-6 flex items-center justify-between">
           <div class="flex items-center gap-2">
-            <span id="active-canvas-page-title" class="text-xs font-bold text-white font-mono bg-indigo-900/30 border border-indigo-500/20 px-2.5 py-1 rounded-md">Editing: index.html</span>
+            <span id="active-canvas-page-title" class="text-xs font-bold text-indigo-400 font-mono bg-indigo-950/40 border border-indigo-900/50 px-2.5 py-1 rounded-md">Workspace Mapping Node</span>
           </div>
-          <div class="flex items-center gap-1.5 bg-gray-900/60 border border-gray-800 p-1 rounded-xl">
-            <button id="bp-mobile-btn" class="px-3 py-1.5 text-xs rounded-lg text-gray-400 font-medium transition-all">Mobile</button>
-            <button id="bp-desktop-btn" class="px-3 py-1.5 text-xs rounded-lg bg-indigo-600 text-white font-medium shadow transition-all">Desktop Matrix</button>
+          <div class="flex items-center gap-1 bg-gray-900 border border-gray-800 p-0.5 rounded-lg">
+            <button id="bp-mobile-btn" class="px-2.5 py-1 text-[11px] rounded-md text-gray-400 font-semibold transition-all">Mobile</button>
+            <button id="bp-desktop-btn" class="px-2.5 py-1 text-[11px] rounded-md bg-indigo-600 text-white font-semibold shadow transition-all">Desktop View</button>
           </div>
         </header>
 
-        <div class="flex-1 overflow-y-auto p-8 flex justify-center items-start custom-scrollbar">
-          <div id="visual-sandbox-canvas" class="w-full transition-all duration-300 bg-gray-900/20 border border-dashed border-gray-800 p-6 min-h-[500px]" style="border-radius: 16px;">
-            <div id="empty-canvas-fallback" class="text-center py-32 text-gray-600 text-sm">
-              Visual Environment Empty. Click layout modules or compile through the AI assistant to render layout trees.
+        <!-- Dynamic Content Builder Window Block Render Context Node -->
+        <div class="flex-1 overflow-y-auto p-6 flex justify-center items-start custom-scrollbar">
+          <div id="visual-sandbox-canvas" class="w-full transition-all duration-300 bg-gray-900/10 border border-dashed border-gray-800/80 p-8 min-h-[600px] shadow-inner">
+            <!-- Sandbox Blocks Injected Live Natively -->
+            <div id="empty-canvas-fallback" class="text-center py-40 text-gray-600 text-xs tracking-wider">
+              VISUAL MATRIX CANVAS EMPTY. INTERACT WITH SIDEBAR BLOCKS TO INITIALIZE NODE CONTENT TREES.
             </div>
           </div>
         </div>
@@ -179,128 +207,184 @@
 
   </div>
 
+  <!-- --- SYSTEM CODE LOGIC SUITE EXECUTABLE RUNTIME --- -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
 
-      // --- MASTER ENTERPRISE BLOCKS LIBRARY CONTEXT DATA ---
+      // --- ENTERPRISE READY RICH LAYOUT BLOCKS COLLECTION ---
       const MASTER_ENTERPRISE_BLOCKS = [
         {
+          id: 'block-navbar-premium',
+          name: '🌐 Glassmorphic Sticky Header',
+          type: 'navigation',
+          html: `
+            <nav class="bg-gray-950/60 backdrop-blur-md border border-gray-800/60 p-4 rounded-2xl my-4 flex items-center justify-between shadow-lg px-6">
+              <div class="flex items-center gap-2 font-bold text-white text-sm tracking-tight"><span class="bg-indigo-600 text-white p-1 rounded text-xs">N</span> NEXUS_NET</div>
+              <div class="hidden md:flex items-center gap-6 text-xs font-medium text-gray-400">
+                <a href="#" class="hover:text-white transition-colors">Core Systems</a><a href="#" class="hover:text-white transition-colors">Integrations</a><a href="#" class="hover:text-white transition-colors">Pricing Hub</a>
+              </div>
+              <button class="bg-white hover:bg-gray-100 text-black font-bold px-4 py-1.5 rounded-xl text-xs transition-colors">Launch Stack</button>
+            </nav>
+          `
+        },
+        {
           id: 'hero-premium-2026',
-          name: '🔥 Infinite Conversion Hero',
+          name: '🔥 Infinite Conversion Hero Grid',
           type: 'hero',
           html: `
-            <div class="bg-gradient-to-br from-[#0f172a] via-[#1e1b4b] to-[#0f172a] text-white py-28 px-8 text-center rounded-3xl my-6 border border-indigo-500/30 shadow-2xl relative overflow-hidden">
-              <span class="bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">Nexus Pro v4.0 Live</span>
-              <h1 class="text-4xl md:text-6xl font-black tracking-tighter mt-6 mb-4 bg-gradient-to-r from-white via-indigo-200 to-gray-400 bg-clip-text text-transparent">Next Generation Web Architecture</h1>
-              <p class="text-base md:text-lg text-indigo-200/80 max-w-2xl mx-auto mb-8 font-medium">Create absolute production optimized visual interfaces without touching a single deployment node. 100% Core Web Vitals Performance guaranteed.</p>
-              <div class="flex justify-center gap-4">
-                <button class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-lg shadow-indigo-600/30 hover:-translate-y-0.5 text-sm">Initialize Stack</button>
-                <button class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-gray-200 px-6 py-3 rounded-xl font-bold transition-all text-sm">Documentation</button>
+            <div class="bg-gradient-to-br from-[#0b0f19] via-[#1a1333] to-[#05070f] text-white py-24 px-8 text-center rounded-3xl my-4 border border-indigo-500/20 shadow-2xl relative overflow-hidden">
+              <span class="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Platform Core Architecture v4.2</span>
+              <h1 class="text-4xl md:text-6xl font-black tracking-tight mt-6 mb-4 bg-gradient-to-r from-white via-indigo-200 to-gray-400 bg-clip-text text-transparent">Next Generation Web Matrices</h1>
+              <p class="text-xs md:text-sm text-indigo-200/70 max-w-xl mx-auto mb-8 font-medium leading-relaxed">Compile production optimized absolute visual nodes without interacting with server pipelines. Native 100% Core Web Vitals structural rendering layers.</p>
+              <div class="flex justify-center gap-3">
+                <button class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3 rounded-xl font-bold transition-all text-xs shadow-lg shadow-indigo-600/20">Initialize Console</button>
+                <button class="bg-gray-900 hover:bg-gray-800 border border-gray-800 text-gray-300 px-6 py-3 rounded-xl font-bold transition-all text-xs">Read Documentation</button>
+              </div>
+            </div>
+          `
+        },
+        {
+          id: 'block-feature-matrix',
+          name: '⚡ Distributed Services Grid Matrix',
+          type: 'features',
+          html: `
+            <div class="py-12 px-6 bg-[#090d16] border border-gray-800/60 rounded-3xl my-4 shadow-xl">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-gray-950/50 rounded-2xl border border-gray-800/40">
+                  <div class="text-2xl mb-3">📡</div>
+                  <h4 class="text-sm font-bold text-white mb-1">Decentralized Storage Edge</h4>
+                  <p class="text-xs text-gray-400 leading-relaxed">Dynamic data packages replicated fluidly on localized node targets safely.</p>
+                </div>
+                <div class="p-6 bg-gray-950/50 rounded-2xl border border-gray-800/40">
+                  <div class="text-2xl mb-3">🛠️</div>
+                  <h4 class="text-sm font-bold text-white mb-1">Autonomous Compilation</h4>
+                  <p class="text-xs text-gray-400 leading-relaxed">Optimizes asset mapping models contextually down to clean pure markup algorithms.</p>
+                </div>
+                <div class="p-6 bg-gray-950/50 rounded-2xl border border-gray-800/40">
+                  <div class="text-2xl mb-3">🔒</div>
+                  <h4 class="text-sm font-bold text-white mb-1">Cryptographic Hardened Shell</h4>
+                  <p class="text-xs text-gray-400 leading-relaxed">End-to-end token handshakes embedded directly inside visual structural layers.</p>
+                </div>
               </div>
             </div>
           `
         },
         {
           id: 'ecom-product-grid',
-          name: '🛍️ High-Conversion E-Com Dynamic Shelf',
+          name: '🛍️ High-Conversion Product Dynamic Shelf',
           type: 'ecommerce',
           html: `
-            <div class="py-16 px-8 bg-[#111827] text-gray-100 rounded-3xl my-6 border border-gray-800 shadow-xl">
-              <div class="text-center max-w-md mx-auto mb-12">
-                <h2 class="text-3xl font-black text-white">Featured Digital Products</h2>
-                <p class="text-xs text-gray-400 mt-1">Direct deployment integration nodes linked to autonomous decentralized fulfillment centers.</p>
+            <div class="py-16 px-8 bg-gray-950 text-gray-100 rounded-3xl my-4 border border-gray-900 shadow-xl">
+              <div class="text-center max-w-sm mx-auto mb-10">
+                <h2 class="text-2xl font-bold text-white tracking-tight">Enterprise Access Matrices</h2>
+                <p class="text-[11px] text-gray-400 mt-0.5">Decentralized fulfillment nodes linked to absolute deployment pipelines contextually.</p>
               </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="p-6 bg-[#1f2937]/50 rounded-2xl border border-gray-700/60 flex flex-col justify-between">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-5 bg-gray-900/40 rounded-2xl border border-gray-800/60 flex flex-col justify-between">
                   <div>
-                    <div class="w-full h-48 bg-gradient-to-tr from-purple-600/20 to-indigo-600/20 rounded-xl mb-4 border border-gray-700/40 flex items-center justify-center text-3xl">📦</div>
-                    <h3 class="text-lg font-bold text-white mb-1">Quantum Cloud Token Node</h3>
-                    <p class="text-xs text-gray-400 mb-4 font-mono">SKU: PRO-NODE-2026</p>
+                    <div class="w-full h-40 bg-gradient-to-tr from-purple-600/10 to-indigo-600/10 rounded-xl mb-4 flex items-center justify-center text-2xl border border-gray-800/50">📦</div>
+                    <h3 class="text-sm font-bold text-white">Quantum Cloud Token Node</h3>
+                    <p class="text-[10px] text-gray-500 font-mono mt-0.5">SKU: PRO-NODE-2026</p>
                   </div>
                   <div class="flex items-center justify-between mt-4">
-                    <span class="text-xl font-black text-emerald-400">$49.00</span>
-                    <button class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg font-bold text-xs transition-colors">Instant Checkout</button>
+                    <span class="text-md font-extrabold text-emerald-400">$49.00</span>
+                    <button class="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1.5 rounded-lg font-bold text-[10px] transition-colors">Instant Checkout</button>
                   </div>
                 </div>
-                <div class="p-6 bg-[#1f2937]/50 rounded-2xl border border-gray-700/60 flex flex-col justify-between">
+                <div class="p-5 bg-gray-900/40 rounded-2xl border border-gray-800/60 flex flex-col justify-between">
                   <div>
-                    <div class="w-full h-48 bg-gradient-to-tr from-emerald-600/20 to-teal-600/20 rounded-xl mb-4 border border-gray-700/40 flex items-center justify-center text-3xl">🔑</div>
-                    <h3 class="text-lg font-bold text-white mb-1">Enterprise Access Matrix</h3>
-                    <p class="text-xs text-gray-400 mb-4 font-mono">SKU: MATRIX-ENT</p>
+                    <div class="w-full h-40 bg-gradient-to-tr from-emerald-600/10 to-teal-600/10 rounded-xl mb-4 flex items-center justify-center text-2xl border border-gray-800/50">🔑</div>
+                    <h3 class="text-sm font-bold text-white">Enterprise Access Matrix</h3>
+                    <p class="text-[10px] text-gray-500 font-mono mt-0.5">SKU: MATRIX-ENT</p>
                   </div>
                   <div class="flex items-center justify-between mt-4">
-                    <span class="text-xl font-black text-emerald-400">$99.00</span>
-                    <button class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg font-bold text-xs transition-colors">Instant Checkout</button>
+                    <span class="text-md font-extrabold text-emerald-400">$99.00</span>
+                    <button class="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1.5 rounded-lg font-bold text-[10px] transition-colors">Instant Checkout</button>
                   </div>
                 </div>
               </div>
             </div>
           `
+        },
+        {
+          id: 'block-footer-premium',
+          name: '📋 Corporate Structure Info Footer',
+          type: 'footer',
+          html: `
+            <footer class="bg-gray-950 border border-gray-900 p-8 rounded-2xl my-4 text-xs text-gray-500 flex flex-col md:flex-row items-center justify-between gap-4">
+              <div>
+                <span class="text-white font-bold tracking-tight">INDY CREATE</span>
+                <p class="text-[10px] text-gray-600 mt-1">© 2026 Indy Create Engineering Suite. All records fully open-source.</p>
+              </div>
+              <div class="flex items-center gap-6 font-medium text-gray-400">
+                <a href="#" class="hover:text-white transition-colors">Terms of Operations</a><a href="#" class="hover:text-white transition-colors">Privacy Modules</a>
+              </div>
+            </footer>
+          `
         }
       ];
 
-      // --- STATE MATRIX LAYERS ---
-      let currentScreen = 'login';
-      let cmsDatabase = [
+      // --- PERSISTENCE STATE UTILITY MANAGER (LocalStorage Ecosystem) ---
+      function readState(key, fallback) {
+        const stored = localStorage.getItem(`indy_${key}`);
+        return stored ? JSON.parse(stored) : fallback;
+      }
+      function saveState(key, data) {
+        localStorage.setItem(`indy_${key}`, JSON.stringify(data));
+      }
+
+      let cmsDatabase = readState('cms_db', [
         { id: 1, title: "Anand Tech Trends 2026", author: "Manjas Anand", views: "14.2K clicks" },
         { id: 2, title: "Building Autonomous Compilers", author: "Dev Team Core", views: "8.9K clicks" }
-      ];
-      let projects = [
-        { id: 101, name: "Manjas Global Hub SaaS", activePlatformPages: 2, lastUpdated: "Just Now", isLive: false, deployedLink: "" }
-      ];
-      let pagesList = [
-        { id: 'p-home', name: 'Home Page', slug: 'index', blocks: [MASTER_ENTERPRISE_BLOCKS[0]] },
-        { id: 'p-store', name: 'E-Commerce Store', slug: 'shop', blocks: [MASTER_ENTERPRISE_BLOCKS[1]] }
-      ];
+      ]);
       
-      let activePageId = 'p-home';
-      let activeProjectIdx = null;
+      let projects = readState('projects_list', [
+        { id: 101, name: "Manjas Global Hub SaaS", activePlatformPages: 2, lastUpdated: "Just Now", isLive: false, deployedLink: "" }
+      ]);
+      
+      let pagesList = readState('pages_list', [
+        { id: 'p-home', name: 'Home Page', slug: 'index', blocks: [MASTER_ENTERPRISE_BLOCKS[0], MASTER_ENTERPRISE_BLOCKS[1]] },
+        { id: 'p-store', name: 'E-Commerce Store', slug: 'shop', blocks: [MASTER_ENTERPRISE_BLOCKS[3]] }
+      ]);
+      
+      let activePageId = readState('active_page_id', 'p-home');
+      let activeProjectIdx = readState('active_project_idx', null);
 
-      // --- DOM ELEMENTS ---
+      // --- DOM ELEMENT QUERY SELECTORS ---
       const screenLogin = document.getElementById('screen-login');
       const screenDashboard = document.getElementById('screen-dashboard');
       const screenBuilder = document.getElementById('screen-builder');
-      
       const loginForm = document.getElementById('login-form');
       const logoutBtn = document.getElementById('logout-btn');
       const backToDashBtn = document.getElementById('back-to-dash-btn');
-      
       const cmsTableBody = document.getElementById('cms-table-body');
       const cmsInsertBtn = document.getElementById('cms-insert-btn');
       const cmsTitleInput = document.getElementById('cms-title');
       const cmsAuthorInput = document.getElementById('cms-author');
-      
       const projectForm = document.getElementById('project-form');
       const projectTitleInput = document.getElementById('project-title-input');
       const projectsGrid = document.getElementById('projects-grid');
-      
       const pagesSelectContainer = document.getElementById('pages-select-container');
       const addPageForm = document.getElementById('add-page-form');
       const newPageNameInput = document.getElementById('new-page-name');
       const newPageSlugInput = document.getElementById('new-page-slug');
-      
       const libraryBlocksList = document.getElementById('library-blocks-list');
       const visualSandboxCanvas = document.getElementById('visual-sandbox-canvas');
       const activeCanvasPageTitle = document.getElementById('active-canvas-page-title');
       const emptyCanvasFallback = document.getElementById('empty-canvas-fallback');
-      
       const bpMobileBtn = document.getElementById('bp-mobile-btn');
       const bpDesktopBtn = document.getElementById('bp-desktop-btn');
-      
       const aiGenerationForm = document.getElementById('ai-generation-form');
       const aiPromptInput = document.getElementById('ai-prompt-input');
       const aiCompileBtn = document.getElementById('ai-compile-btn');
-      
-      const vercelDeploymentForm = document.getElementById('vercel-deployment-form');
-      const vercelTokenInput = document.getElementById('vercel-token-input');
       const canvasPaddingInput = document.getElementById('canvas-padding-input');
       const canvasRadiusInput = document.getElementById('canvas-radius-input');
-      const cloudDeployBtn = document.getElementById('cloud-deploy-btn');
+      const btnExportCode = document.getElementById('btn-export-code');
+      const btnCopyRaw = document.getElementById('btn-copy-raw');
       const deploymentLogTerminal = document.getElementById('deployment-log-terminal');
 
-      // --- SCREEN CONTROLLER HANDSHAKE ---
+      // --- CENTRAL VIEW NAVIGATOR ---
       function navigateTo(screen) {
-        currentScreen = screen;
         screenLogin.classList.add('hidden');
         screenDashboard.classList.add('hidden');
         screenBuilder.classList.add('hidden');
@@ -314,30 +398,28 @@
           screenBuilder.classList.remove('hidden');
           renderBuilderInterface();
         }
+        saveState('current_screen', screen);
       }
 
-      // --- AUTH HANDLERS ---
-      loginForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        navigateTo('dashboard');
-      });
+      // --- EVENT ROUTING CORE FLOWS ---
+      loginForm.addEventListener('submit', (e) => { e.preventDefault(); navigateTo('dashboard'); });
+      logoutBtn.addEventListener('click', () => { navigateTo('login'); });
+      backToDashBtn.addEventListener('click', () => { navigateTo('dashboard'); });
 
-      logoutBtn.addEventListener('click', () => navigateTo('login'));
-      backToDashBtn.addEventListener('click', () => navigateTo('dashboard'));
-
-      // --- DATA HUB CMS CORE RENDERER ---
+      // --- CMS STORAGE COMPILER ENGINE ---
       function renderCmsDatabase() {
         cmsTableBody.innerHTML = '';
         cmsDatabase.forEach(row => {
           const el = document.createElement('div');
-          el.className = 'grid grid-cols-3 p-3 border-b border-gray-800/40 font-mono text-gray-300 hover:bg-gray-800/30';
+          el.className = 'grid grid-cols-3 p-3 border-b border-gray-900 font-mono text-gray-300 hover:bg-gray-900/40 text-[11px]';
           el.innerHTML = `
-            <span class="text-indigo-400 truncate">${row.title}</span>
-            <span class="truncate">${row.author}</span>
-            <span class="text-emerald-400">${row.views}</span>
+            <span class="text-indigo-400 font-medium truncate">${row.title}</span>
+            <span class="truncate text-gray-400">${row.author}</span>
+            <span class="text-emerald-500 font-bold">${row.views}</span>
           `;
           cmsTableBody.appendChild(el);
         });
+        saveState('cms_db', cmsDatabase);
       }
 
       cmsInsertBtn.addEventListener('click', () => {
@@ -345,49 +427,57 @@
         const author = cmsAuthorInput.value.trim();
         if(title && author) {
           cmsDatabase.push({ id: Date.now(), title, author, views: "0 clicks" });
-          cmsTitleInput.value = '';
-          cmsAuthorInput.value = '';
+          cmsTitleInput.value = ''; cmsAuthorInput.value = '';
           renderCmsDatabase();
         }
       });
 
-      // --- REPOSITORIES PROJECTS LAYER GRID ---
+      // --- ACTIVE CONTAINER STORAGE CARD GRIDS ---
       function renderProjectsGrid() {
         projectsGrid.innerHTML = '';
         projects.forEach((project, idx) => {
           const card = document.createElement('div');
-          card.className = 'bg-[#0b0f19] border border-gray-800/80 rounded-3xl p-6 flex flex-col justify-between hover:border-indigo-500/30 transition-all shadow-2xl relative group overflow-hidden';
+          card.className = 'glass-panel rounded-3xl p-6 flex flex-col justify-between hover:border-indigo-500/30 transition-all shadow-xl relative group overflow-hidden';
           
           let badge = project.isLive 
-            ? `<span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 uppercase tracking-wider animate-pulse">● Cluster Globally Active</span>`
-            : `<span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-wider">Local Sandboxed Node</span>`;
+            ? `<span class="text-[9px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 uppercase tracking-wider">● Online & Export Ready</span>`
+            : `<span class="text-[9px] font-bold px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 uppercase tracking-wider">Local Work Node</span>`;
           
           let linkElement = project.isLive 
-            ? `<a href="${project.deployedLink}" target="_blank" rel="noreferrer" class="text-xs text-indigo-400 font-mono underline block truncate mb-2">🔗 Launch Production Node Target</a>`
+            ? `<button class="text-left text-[11px] text-emerald-400 font-mono underline block truncate mb-1 bg-transparent border-0 cursor-pointer download-trigger">📥 Trigger Static HTML Package Downloader</button>`
             : '';
 
           card.innerHTML = `
             <div>
               <div class="flex items-center justify-between mb-4">
                 ${badge}
-                <span class="text-xs font-mono text-gray-500">${project.lastUpdated}</span>
+                <span class="text-[11px] font-mono text-gray-500">${project.lastUpdated}</span>
               </div>
-              <h4 class="text-lg font-black text-white mb-1 group-hover:text-indigo-400 transition-colors truncate">${project.name}</h4>
-              <p class="text-xs text-gray-400 font-medium mb-4">${project.activePlatformPages} Pages compiled routing arrays mapped</p>
+              <h4 class="text-lg font-bold text-white mb-1 group-hover:text-indigo-400 transition-colors truncate">${project.name}</h4>
+              <p class="text-xs text-gray-400 font-medium mb-4">${project.activePlatformPages} Pages compiled inside matrix build</p>
               ${linkElement}
             </div>
-            <button class="load-canvas-btn w-full mt-6 py-3 bg-gray-800 hover:bg-indigo-600 text-xs font-bold text-center rounded-xl transition-all tracking-wider text-gray-200 hover:text-white uppercase">
+            <button class="load-canvas-btn w-full mt-4 py-3 bg-gray-900 hover:bg-indigo-600 text-xs font-bold text-center rounded-xl transition-all tracking-wider text-gray-200 hover:text-white uppercase">
               Load Visual Canvas Engine Core 🛠️
             </button>
           `;
 
           card.querySelector('.load-canvas-btn').addEventListener('click', () => {
             activeProjectIdx = idx;
+            saveState('active_project_idx', idx);
             navigateTo('builder');
           });
 
+          if(project.isLive) {
+            card.querySelector('.download-trigger').addEventListener('click', (e) => {
+              e.stopPropagation();
+              triggerProjectPackageDownload();
+            });
+          }
+
           projectsGrid.appendChild(card);
         });
+        saveState('projects_list', projects);
       }
 
       projectForm.addEventListener('submit', (e) => {
@@ -397,8 +487,8 @@
         projects.unshift({
           id: Date.now(),
           name: title,
-          activePlatformPages: 1,
-          lastUpdated: "Created Just Now",
+          activePlatformPages: pagesList.length,
+          lastUpdated: "Just Now",
           isLive: false,
           deployedLink: ""
         });
@@ -406,40 +496,35 @@
         renderProjectsGrid();
       });
 
-      function sandboxRefreshCanvasMetrics() {
-        const pad = canvasPaddingInput.value || '24';
-        const rad = canvasRadiusInput.value || '16';
-        visualSandboxCanvas.style.padding = `${pad}px`;
-        visualSandboxCanvas.style.borderRadius = `${rad}px`;
-      }
-
       function renderDashboardContent() {
         renderCmsDatabase();
         renderProjectsGrid();
       }
 
-      // --- VISUAL CANVAS ENGINE HANDLERS ---
+      // --- VISUAL SANDBOX WORKSPACE INTERACTION CODE ---
       function renderBuilderInterface() {
         renderRoutingNodes();
         renderComponentPalette();
         renderVisualCanvas();
-        sandboxRefreshCanvasMetrics();
+        sandboxUpdateActiveMetrics();
       }
 
       function renderRoutingNodes() {
         pagesSelectContainer.innerHTML = '';
         pagesList.forEach(page => {
           const btn = document.createElement('button');
-          btn.className = `w-full text-left px-3 py-2 rounded-xl text-xs font-mono flex items-center justify-between transition-all ${page.id === activePageId ? 'bg-indigo-600 text-white font-bold' : 'bg-gray-800/40 text-gray-400 hover:bg-gray-800/80'}`;
-          btn.innerHTML = `<span>📄 ${page.name}</span> <span class="opacity-60 text-[10px]">/${page.slug}</span>`;
+          btn.className = `w-full text-left px-3 py-2.5 rounded-xl text-xs font-mono flex items-center justify-between transition-all ${page.id === activePageId ? 'bg-indigo-600 text-white font-bold' : 'bg-gray-900 text-gray-400 hover:bg-gray-800'}`;
+          btn.innerHTML = `<span>📄 ${page.name}</span> <span class="opacity-60 text-[10px]">/${page.slug}.html</span>`;
           
           btn.addEventListener('click', () => {
             activePageId = page.id;
-            activeCanvasPageTitle.innerText = `Editing: ${page.slug}.html`;
+            saveState('active_page_id', page.id);
+            activeCanvasPageTitle.innerText = `Editing Node Workspace: ${page.slug}.html`;
             renderBuilderInterface();
           });
           pagesSelectContainer.appendChild(btn);
         });
+        saveState('pages_list', pagesList);
       }
 
       addPageForm.addEventListener('submit', (e) => {
@@ -449,8 +534,11 @@
         if(!name || !slug) return;
 
         pagesList.push({ id: `p-${Date.now()}`, name, slug, blocks: [] });
-        newPageNameInput.value = '';
-        newPageSlugInput.value = '';
+        newPageNameInput.value = ''; newPageSlugInput.value = '';
+        
+        if(activeProjectIdx !== null) {
+          projects[activeProjectIdx].activePlatformPages = pagesList.length;
+        }
         renderRoutingNodes();
       });
 
@@ -458,8 +546,8 @@
         libraryBlocksList.innerHTML = '';
         MASTER_ENTERPRISE_BLOCKS.forEach(block => {
           const btn = document.createElement('button');
-          btn.className = 'w-full text-left bg-gray-800/50 hover:bg-indigo-950/40 border border-gray-700/60 hover:border-indigo-500/40 p-3 rounded-xl text-xs transition-all flex items-center justify-between text-gray-300 hover:text-white';
-          btn.innerHTML = `<span>${block.name}</span> <span class="text-indigo-400 font-bold">+</span>`;
+          btn.className = 'w-full text-left bg-gray-900 hover:bg-indigo-950/20 border border-gray-800 hover:border-indigo-500/40 p-2.5 rounded-xl text-xs transition-all flex items-center justify-between text-gray-300 hover:text-white';
+          btn.innerHTML = `<span class="truncate">${block.name}</span> <span class="text-indigo-400 font-bold text-sm">+</span>`;
           
           btn.addEventListener('click', () => {
             const targetPage = pagesList.find(p => p.id === activePageId);
@@ -485,11 +573,11 @@
 
         targetPage.blocks.forEach((block, idx) => {
           const wrapper = document.createElement('div');
-          wrapper.className = 'relative group/block border border-transparent hover:border-indigo-500/50 rounded-3xl transition-all';
+          wrapper.className = 'relative group/block border border-transparent hover:border-indigo-500/40 rounded-2xl transition-all my-2';
           wrapper.innerHTML = `
             ${block.html}
-            <button class="absolute top-2 right-2 bg-red-600/90 hover:bg-red-500 text-white font-bold text-[10px] px-2 py-1 rounded shadow opacity-0 group-hover/block:opacity-100 transition-opacity z-10">
-              Delete Module
+            <button class="absolute top-2 right-2 bg-red-600/90 hover:bg-red-500 text-white font-bold text-[10px] px-2.5 py-1 rounded shadow-lg opacity-0 group-hover/block:opacity-100 transition-opacity z-30">
+              Remove Module
             </button>
           `;
 
@@ -500,43 +588,51 @@
 
           visualSandboxCanvas.appendChild(wrapper);
         });
+        saveState('pages_list', pagesList);
       }
 
-      // Live Sizing Breakpoints Controls
+      function sandboxUpdateActiveMetrics() {
+        const pad = canvasPaddingInput.value || '32';
+        const rad = canvasRadiusInput.value || '24';
+        visualSandboxCanvas.style.padding = `${pad}px`;
+        visualSandboxCanvas.style.borderRadius = `${rad}px`;
+      }
+
       bpMobileBtn.addEventListener('click', () => {
         visualSandboxCanvas.style.maxWidth = '420px';
-        bpMobileBtn.className = 'px-3 py-1.5 text-xs rounded-lg bg-indigo-600 text-white font-medium shadow';
-        bpDesktopBtn.className = 'px-3 py-1.5 text-xs rounded-lg text-gray-400 font-medium';
+        bpMobileBtn.className = 'px-2.5 py-1 text-[11px] rounded-md bg-indigo-600 text-white font-semibold shadow';
+        bpDesktopBtn.className = 'px-2.5 py-1 text-[11px] rounded-md text-gray-400 font-semibold';
       });
 
       bpDesktopBtn.addEventListener('click', () => {
         visualSandboxCanvas.style.maxWidth = '100%';
-        bpDesktopBtn.className = 'px-3 py-1.5 text-xs rounded-lg bg-indigo-600 text-white font-medium shadow';
-        bpMobileBtn.className = 'px-3 py-1.5 text-xs rounded-lg text-gray-400 font-medium';
+        bpDesktopBtn.className = 'px-2.5 py-1 text-[11px] rounded-md bg-indigo-600 text-white font-semibold shadow';
+        bpMobileBtn.className = 'px-2.5 py-1 text-[11px] rounded-md text-gray-400 font-semibold';
       });
 
-      canvasPaddingInput.addEventListener('input', sandboxRefreshCanvasMetrics);
-      canvasRadiusInput.addEventListener('input', sandboxRefreshCanvasMetrics);
+      canvasPaddingInput.addEventListener('input', sandboxUpdateActiveMetrics);
+      canvasRadiusInput.addEventListener('input', sandboxUpdateActiveMetrics);
 
-      // --- ✨ AI OBJECT SIMULATOR CORE MOTOR ---
+      // --- NEURAL LAYOUT ARCHITECT ARTIFICIAL ENGINE ---
       aiGenerationForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const prompt = aiPromptInput.value.trim();
         if(!prompt) return;
 
         aiCompileBtn.disabled = true;
-        aiCompileBtn.innerText = 'AI Synthesizing Node Blocks... ⚡';
+        aiCompileBtn.innerText = 'AI Constructing Core Nodes... ⚡';
 
         setTimeout(() => {
           const synthesizedBlock = {
             id: `ai-block-${Date.now()}`,
-            name: `✨ AI: ${prompt.substring(0, 18)}...`,
+            name: `✨ AI: ${prompt.substring(0, 16)}...`,
             type: 'ai-generated',
             html: `
-              <div style="padding: 4rem 2rem; background: linear-gradient(to right, #111827, #312e81); border: 2px dashed #6366f1; border-radius: 1.5rem; margin: 1.5rem 0; text-align: center; color: white;">
-                <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">AI Synthesized Object Container</h3>
-                <p style="font-size: 0.875rem; color: #cbd5e1; max-w: 30rem; margin: 0 auto 1.5rem auto;">Generated based on intent parameters: "${prompt}"</p>
-                <div style="background-color: rgba(255,255,255,0.05); padding: 1rem; border-radius: 0.5rem; font-family: monospace; font-size: 0.75rem; color: #a5b4fc; text-align: left; max-w: 24rem; margin: 0 auto;">STATUS: Autonomous Edge Matrix Render Confirmed</div>
+              <div class="p-12 bg-gradient-to-r from-gray-950 via-indigo-950/30 to-gray-950 border border-indigo-500/20 rounded-3xl my-4 text-center">
+                <span class="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-[9px] px-2 py-0.5 rounded font-mono uppercase">Neural System Node Layer</span>
+                <h3 class="text-xl font-extrabold text-white mt-4 mb-2">Automated Object Block Container</h3>
+                <p class="text-xs text-gray-400 max-w-md mx-auto mb-6">Generated seamlessly matching design parameters: "${prompt}"</p>
+                <div class="inline-block bg-black/40 border border-gray-800 text-[10px] px-3 py-1.5 rounded-lg font-mono text-indigo-300">SYSTEM RESPONSE STATE: 200 OK EDGE_ACTIVE</div>
               </div>
             `
           };
@@ -549,52 +645,80 @@
 
           aiPromptInput.value = '';
           aiCompileBtn.disabled = false;
-          aiCompileBtn.innerText = 'Execute AI Object Synthesis';
-        }, 1500);
-      });
-
-      // --- 🚀 CLOUD DEPLOYMENT SIMULATOR MOTOR ---
-      vercelDeploymentForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const token = vercelTokenInput.value.trim();
-
-        deploymentLogTerminal.classList.remove('hidden');
-        deploymentLogTerminal.innerText = 'Initializing Multi-Page Global Static Compiler...\n';
-
-        if (!token) {
-          deploymentLogTerminal.innerText += 'Deployment Termination: Missing Secured Access Authorization Key.';
-          return;
-        }
-
-        cloudDeployBtn.disabled = true;
-        cloudDeployBtn.innerText = 'DEPLOYING TO EDGE MESH...';
-
-        setTimeout(() => {
-          deploymentLogTerminal.innerText += 'Bundling code matrices...\n';
-          deploymentLogTerminal.innerText += 'Syncing configuration arrays with Edge cluster nodes...\n';
-          
-          setTimeout(() => {
-            const targetIdx = activeProjectIdx !== null ? activeProjectIdx : 0;
-            
-            projects[targetIdx].isLive = true;
-            projects[targetIdx].deployedLink = `https://indy-create-project-${Date.now()}.vercel.app`;
-            projects[targetIdx].lastUpdated = "Online via Edge Global Matrix";
-            projects[targetIdx].activePlatformPages = pagesList.length;
-
-            deploymentLogTerminal.innerText += 'Deployment Matrix Fully Active! Project structural components initialized successfully.\n';
-            
-            setTimeout(() => {
-              cloudDeployBtn.disabled = false;
-              cloudDeployBtn.innerText = 'Dispatch Global Live Cloud 🚀';
-              navigateTo('dashboard');
-            }, 1000);
-
-          }, 1000);
+          aiCompileBtn.innerText = 'Execute AI Node Synthesis';
         }, 1200);
       });
 
-      // INITIAL SYSTEM BOOT LAUNCH NODE
-      navigateTo('login');
+      // --- 📤 COMPONENT EXPORTER CONTROLLER PIPELINES ---
+      function generateSinglePageRawString(page) {
+        const padding = canvasPaddingInput.value || '32';
+        const radius = canvasRadiusInput.value || '24';
+        const rawContentBlocks = page.blocks.map(b => b.html).join('\n');
+        
+        return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${page.name} - Compiled via INDY CREATE</title>
+  <script src="https://cdn.tailwindcss.com"><\/script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #030712; color: #f3f4f6; }
+  </style>
+</head>
+<body class="min-h-screen p-4 md:p-[${padding}px]">
+  <div style="max-w: 1200px; margin: 0 auto; border-radius: ${radius}px; overflow: hidden;">
+    ${rawContentBlocks || '<div style="text-align:center; padding:8rem; color:#4b5563; font-family:sans-serif;">Workspace node content matrix empty.</div>'}
+  </div>
+</body>
+</html>`;
+      }
+
+      btnCopyRaw.addEventListener('click', () => {
+        const activePage = pagesList.find(p => p.id === activePageId);
+        if(!activePage) return;
+        const pageCodeString = generateSinglePageRawString(activePage);
+        
+        navigator.clipboard.writeText(pageCodeString).then(() => {
+          alert(`📋 Copied dynamic source string for /${activePage.slug}.html successfully!`);
+        });
+      });
+
+      function triggerProjectPackageDownload() {
+        deploymentLogTerminal.classList.remove('hidden');
+        deploymentLogTerminal.innerText = 'Compiling individual static framework routes...\n';
+
+        setTimeout(() => {
+          deploymentLogTerminal.innerText += 'Packing structural page objects into static layout downlinks...\n';
+          
+          setTimeout(() => {
+            const activePage = pagesList.find(p => p.id === activePageId);
+            const bundleMarkup = generateSinglePageRawString(activePage);
+            
+            const blob = new Blob([bundleMarkup], { type: 'text/html' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `${activePage.slug || 'index'}.html`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            deploymentLogTerminal.innerText += 'Download trigger successfully built!\n';
+          }, 800);
+        }, 600);
+      }
+
+      btnExportCode.addEventListener('click', () => {
+        if(activeProjectIdx !== null) {
+          projects[activeProjectIdx].isLive = true;
+          projects[activeProjectIdx].lastUpdated = "Export Bundled Successfully";
+        }
+        triggerProjectPackageDownload();
+      });
+
+      // LAUNCH INITIAL NODE
+      navigateTo('dashboard');
     });
   </script>
 </body>
